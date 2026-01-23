@@ -1,0 +1,303 @@
+{% load static %}
+{% load portfolio_extras %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joel - Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Joel Tito</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-image">
+                <div class="profile-image" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; font-weight: 800;">J</div>
+            </div>
+            <div class="hero-content">
+                <h1>Hi, I'm Joel</h1>
+                <p class="subtitle">IoT & Cybersecurity Engineer | Systems Developer</p>
+                <p>Security-aware systems engineer specializing in IoT, networking, backend systems, and defensive cybersecurity. I build secure, reliable systems with a blue-team defensive mindset and hands-on engineering approach.</p>
+                <div class="hero-buttons">
+                    <a href="{% static 'files/CV_Joel_Tito.pdf' %}" download class="cta-button">Download CV</a>
+                    <a href="{% url 'portfolio:contact' %}" class="cta-button secondary">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div>
+                    <div style="width: 100%; height: 300px; border-radius: 15px; box-shadow: var(--shadow); background: linear-gradient(135deg, #e0e7ff, #c7d2fe); display: flex; align-items: center; justify-content: center; color: var(--primary-color); font-size: 3rem; font-weight: 700;">👨‍💻</div>
+                </div>
+                <div class="about-text">
+                    <p>I'm Joel Tito, a 20-year-old Computer Science & Engineering (IoT) student at CHRIST University, Bengaluru. I specialize in IoT systems, cybersecurity, networking, and cloud computing with a strong blue-team defensive mindset.</p>
+                    
+                    <p>My expertise spans Python, C, Java, Rust, Django REST APIs, MongoDB, and embedded systems (ESP32-S3, Arduino). I focus on secure system design, monitoring, and reliability rather than offensive exploitation.</p>
+                    
+                    <p>Beyond coding, I'm a competitive programmer, hackathon finalist, university cricket player, and long-distance cyclist. I believe in building robust, secure systems through hands-on engineering and continuous learning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>C/C++</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Java</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>IoT & Embedded Systems</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>ESP32-S3</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Arduino</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Sensor Integration</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Cybersecurity & Networking</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Network Security</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Cisco Packet Tracer</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Blue Team Defense</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                {% for project in projects %}
+                <div class="project-card">
+                    {% if project.image %}
+                        <img src="{{ project.image.url }}" alt="{{ project.title }}" class="project-image">
+                    {% else %}
+                        <div class="project-image" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600;">{{ project.title|first }}</div>
+                    {% endif %}
+                    <div class="project-content">
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <p class="project-description">{{ project.description }}</p>
+                        <div class="project-tech">
+                            {% for tech in project.technologies|split:"," %}
+                                <span class="tech-tag">{{ tech|trim }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="project-links">
+                            {% if project.github_url %}
+                                <a href="{{ project.github_url }}" target="_blank" class="project-link">GitHub</a>
+                            {% endif %}
+                            {% if project.live_url %}
+                                <a href="{{ project.live_url }}" target="_blank" class="project-link">Live Demo</a>
+                            {% endif %}
+                            <a href="https://github.com/JO-Techs" target="_blank" class="project-link">My GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <!-- Sample projects when no projects exist -->
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #6366f1, #4f46e5); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600;">🐙</div>
+                    <div class="project-content">
+                        <h3 class="project-title">My GitHub Profile</h3>
+                        <p class="project-description">Explore my complete collection of projects, contributions, and code repositories showcasing my development journey.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Open Source</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/JO-Techs" target="_blank" class="project-link">Visit GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600;">S</div>
+                    <div class="project-content">
+                        <h3 class="project-title">SentinelPocket</h3>
+                        <p class="project-description">Blue-team defensive auditing device with passive architecture. Focuses on compliance, safety, and audit integrity without offensive capabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ESP32-S3</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Cybersecurity</span>
+                            <span class="tech-tag">IoT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, var(--accent-color), #f97316); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600;">N</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Notify-API</h3>
+                        <p class="project-description">Django REST API notification rule engine with CRUD-based rule management, failure capture, and alerting system.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #10b981, #059669); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600;">I</div>
+                    <div class="project-content">
+                        <h3 class="project-title">IoT Smart Access System</h3>
+                        <p class="project-description">Secure access control system with sensor-based logic and embedded decision-making for enhanced security.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ESP32</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Sensors</span>
+                            <span class="tech-tag">Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <div class="contact-content">
+                <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>joelatdm@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>💼</span>
+                        <span><a href="https://linkedin.com/in/joel-tito" target="_blank" style="color: inherit; text-decoration: none;">LinkedIn Profile</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>Bengaluru, Karnataka | Thrissur, Kerala</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Joel Tito. All rights reserved. Built with Django & ❤️</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
