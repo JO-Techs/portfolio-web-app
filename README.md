@@ -1,4 +1,4 @@
-# Joel's Professional Portfolio
+# Professional Portfolio
 
 A modern, responsive Django-based portfolio website with an attractive design and smooth animations.
 
