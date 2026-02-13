@@ -91,6 +91,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Auto-hide/show navbar on scroll
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            navbar.classList.add('hidden');
+            navbar.classList.remove('visible');
+        } else {
+            navbar.classList.remove('hidden');
+            navbar.classList.add('visible');
+        }
+        
+        lastScrollTop = scrollTop;
+        animateSkills();
+    });
+
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('a[href^="#"]');
     navLinks.forEach(link => {
@@ -143,4 +162,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial skill animation check
     animateSkills();
+
+    // Email form submission
+    const emailForm = document.querySelector('.email-form');
+    if (emailForm) {
+        emailForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const emailInput = emailForm.querySelector('.email-input');
+            const email = emailInput.value;
+            
+            // Simple validation
+            if (email && email.includes('@')) {
+                alert(`Thank you! We'll contact you at ${email}`);
+                emailInput.value = '';
+            } else {
+                alert('Please enter a valid email address');
+            }
+        });
+    }
 });
