@@ -147,13 +147,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-up');
+                entry.target.classList.add('fade-in-up', 'visible');
             }
         });
     }, observerOptions);
 
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.project-card, .skill-category, .about-content, .section');
+    const animateElements = document.querySelectorAll('.project-card, .skill-category, .about-content, .section, .jo-show');
     animateElements.forEach(el => observer.observe(el));
 
     window.addEventListener('scroll', () => {

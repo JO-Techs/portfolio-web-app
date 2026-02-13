@@ -724,6 +724,23 @@ body {
     to { transform: rotate(360deg); }
 }
 
+/* Animation classes */
+.jo-show {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.jo-show.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.jo-hide {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
 /* Footer */
 .footer {
     background: var(--bg-dark);
