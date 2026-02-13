@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joel - Professional Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/JoelWebApp/style.css">
+    <link rel="stylesheet" href="/JoelWebApp/static/css/style.css">
     <style>
         html, body {
             background: linear-gradient(135deg, #0f1419 0%, #1a202c 100%);
@@ -15,7 +16,7 @@
 </head>
 <body>
     <!-- Particle Canvas for entire page -->
-    <canvas id="particles-canvas"></canvas>
+    <canvas id="particles-canvas"></canvas> <!-- static assets are available under /JoelWebApp/static -->
     
     <!-- Navigation -->
     <nav class="navbar">
@@ -50,7 +51,7 @@
                 </div>
                 <p>Security-aware systems engineer specializing in IoT, networking, backend systems, and defensive cybersecurity. I build secure, reliable systems with a blue-team defensive mindset and hands-on engineering approach.</p>
                 <div class="hero-buttons">
-                    <a href="CV_Joel_Tito.pdf" download class="cta-button">Download CV</a>
+                    <a href="/JoelWebApp/static/files/CV_Joel_Tito.pdf" download class="cta-button">Download CV</a>
                     <a href="#contact" class="cta-button secondary">Contact Me</a>
                 </div>
             </div>
@@ -317,6 +318,6 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="/JoelWebApp/static/js/main.js"></script>
 </body>
 </html>

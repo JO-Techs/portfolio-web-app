@@ -1,0 +1,23 @@
+/* ========================================
+   THEME CONFIGURATION - Edit colors here
+   ======================================== */
+
+:root {
+    /* Primary Colors - Cyan Blue Theme */
+    --primary-color: #00d9ff;
+    --secondary-color: #0099cc;
+    --accent-color: #ff6b6b;
+
+    /* Text Colors - Light for dark background */
+    --text-dark: #e2e8f0;
+    --text-light: #cbd5e0;
+
+    /* Background Colors - Very Dark Theme */
+    --bg-light: #1a202c;
+    --bg-dark: #0f1419;
+    --card-bg: #1e2936;
+
+    /* Shadows */
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
