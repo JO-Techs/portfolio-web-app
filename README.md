@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-# Joel's Portfolio - GitHub Pages Version
-
-This is a static version of Joel's professional portfolio website, ready for deployment on GitHub Pages.
-
-## Files Included
-
-- `index.html` - Main portfolio webpage
-- `style.css` - All styling and animations
-- `main.js` - Interactive JavaScript functionality
-- `CV_Joel_Tito.pdf` - Downloadable resume/CV
+# Joel's Portfolio
 
 ## Deployment Instructions
 
@@ -130,4 +120,3 @@ For production deployment:
 ## License
 
 This project is open source and available under the MIT License.
->>>>>>> 5383997f41f00e7b4dd96d84cb836710b0cc686d
