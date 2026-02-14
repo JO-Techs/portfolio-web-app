@@ -20,10 +20,10 @@
 ## Customization
 
 To update content:
-- Edit `index.html` for text content and project information
-- Modify `style.css` for styling changes
-- Update `main.js` for interactive behavior
-- Replace `CV_Joel_Tito.pdf` with your updated resume
+- Update `index.html` for text content and project information (paths are relative)
+- Modify `style.css` or `static/css/style.css` for styling changes
+- Update `main.js` or `static/js/main.js` for interactive behavior
+- Replace `static/files/CV_Joel_Tito.pdf` with your updated resume
 
 ## Live Demo
 
@@ -104,7 +104,7 @@ Edit the template file `templates/portfolio/home.html` to update:
 
 ### Styling
 - Main styles: `static/css/style.css`
-- JavaScript: `static/js/main.js`
+- JavaScript: `static/js/main.js` (imported via `<script src="static/js/main.js"></script>`)
 - Images: `static/images/`
 
 ## Deployment
