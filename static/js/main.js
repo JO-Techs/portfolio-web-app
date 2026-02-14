@@ -163,6 +163,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial skill animation check
     animateSkills();
 
+    // Horizontal scroll with mouse wheel for projects
+    const scrollWrappers = document.querySelectorAll('.scrolling-wrapper');
+    scrollWrappers.forEach(scrollWrapper => {
+        scrollWrapper.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            scrollWrapper.scrollLeft += e.deltaY * 2;
+        }, { passive: false });
+    });
+
     // Email form submission
     const emailForm = document.querySelector('.email-form');
     if (emailForm) {

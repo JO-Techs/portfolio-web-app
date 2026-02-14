@@ -181,3 +181,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+// Horizontal scroll for projects
+const scrollLeftBtn = document.getElementById('scrollLeft');
+const scrollRightBtn = document.getElementById('scrollRight');
+const projectsHorizontal = document.querySelector('.projects-horizontal');
+
+if (scrollLeftBtn && scrollRightBtn && projectsHorizontal) {
+    scrollLeftBtn.addEventListener('click', () => {
+        projectsHorizontal.scrollBy({ left: -400, behavior: 'smooth' });
+    });
+
+    scrollRightBtn.addEventListener('click', () => {
+        projectsHorizontal.scrollBy({ left: 400, behavior: 'smooth' });
+    });
+}
+
+// Projects scroll on hover
+const projectsScroll = document.querySelector('.projects-scroll');
+if (projectsScroll) {
+    projectsScroll.addEventListener('mouseenter', () => {
+        projectsScroll.style.animation = 'scrollProjects 20s linear infinite';
+    });
+    
+    projectsScroll.addEventListener('mouseleave', () => {
+        projectsScroll.style.animation = 'none';
+    });
+}

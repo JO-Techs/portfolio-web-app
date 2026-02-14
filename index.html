@@ -13,6 +13,19 @@
             background-attachment: fixed;
         }
     </style>
+    <style>
+        .project-img, .achievement-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .project-content { padding: 1.5rem; }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(0,217,255,0.1); color: var(--primary-color); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; transition: all 0.3s; cursor: default; border: 1px solid rgba(0,217,255,0.2); }
+        .tag:hover { background: var(--primary-color); color: white; transform: translateY(-2px); }
+        .project, .achievement-card { transition: transform 0.2s ease; }
+    </style>
 </head>
 <body>
     <!-- Particle Canvas for entire page -->
@@ -27,6 +40,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -182,71 +196,159 @@
     <section id="projects" class="section projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #6366f1, #4f46e5); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600;">🐙</div>
+            <div class="scrolling-wrapper">
+                <div class="card">
+                    <img class="project-img" src="static/images/project_1.jpg" alt="Project 1">
                     <div class="project-content">
-                        <h3 class="project-title">My GitHub Profile</h3>
-                        <p class="project-description">Explore my complete collection of projects, contributions, and code repositories showcasing my development journey.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">IoT</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">Open Source</span>
+                        <h3>My GitHub Profile</h3>
+                        <p>Explore my complete collection of projects, contributions, and code repositories.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">Django</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JO-Techs" target="_blank" class="project-link">Visit GitHub</a>
+                        <a href="https://github.com/JO-Techs" target="_blank" class="project-link">Visit GitHub</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="project-img" src="static/images/project_2.jpg" alt="Project 2">
+                    <div class="project-content">
+                        <h3>SentinelPocket</h3>
+                        <p>Blue-team defensive auditing device with passive architecture.</p>
+                        <div class="tech-tags">
+                            <span class="tag">ESP32-S3</span>
+                            <span class="tag">Cybersecurity</span>
+                        </div>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="project-img" src="static/images/project_3.jpg" alt="Project 3">
+                    <div class="project-content">
+                        <h3>Notify-API</h3>
+                        <p>Django REST API notification rule engine with CRUD management.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">REST API</span>
+                        </div>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="project-img" src="static/images/project_4.jpg" alt="Project 4">
+                    <div class="project-content">
+                        <h3>IoT Smart Access</h3>
+                        <p>Secure access control system with sensor-based logic.</p>
+                        <div class="tech-tags">
+                            <span class="tag">ESP32</span>
+                            <span class="tag">C++</span>
+                        </div>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="project-img" src="static/images/project_5.jpg" alt="Project 5">
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Modern Django portfolio with particle animations and dark theme.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/JO-Techs" target="_blank" class="project-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="project-img" src="static/images/project_6.jpg" alt="Project 6">
+                    <div class="project-content">
+                        <h3>Coming Soon</h3>
+                        <p>Exciting new project in development. Stay tuned!</p>
+                        <div class="tech-tags">
+                            <span class="tag">TBA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <div class="scrolling-wrapper">
+                <div class="card">
+                    <img class="achievement-img" src="static/images/achievement_1.jpg" alt="Achievement 1">
+                    <div class="project-content">
+                        <h3>Hackathon Finalist</h3>
+                        <p>Reached finals in multiple national-level hackathons with innovative IoT solutions.</p>
+                        <div class="tech-tags">
+                            <span class="tag">IoT</span>
+                            <span class="tag">Innovation</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600;">S</div>
+                <div class="card">
+                    <img class="achievement-img" src="static/images/achievement_2.jpg" alt="Achievement 2">
                     <div class="project-content">
-                        <h3 class="project-title">SentinelPocket</h3>
-                        <p class="project-description">Blue-team defensive auditing device with passive architecture. Focuses on compliance, safety, and audit integrity without offensive capabilities.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">ESP32-S3</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Cybersecurity</span>
-                            <span class="tech-tag">IoT</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">GitHub</a>
+                        <h3>Competitive Programming</h3>
+                        <p>Active participant in coding competitions with strong problem-solving skills.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Algorithms</span>
+                            <span class="tag">DSA</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, var(--accent-color), #f97316); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600;">N</div>
+                <div class="card">
+                    <img class="achievement-img" src="static/images/achievement_3.jpg" alt="Achievement 3">
                     <div class="project-content">
-                        <h3 class="project-title">Notify-API</h3>
-                        <p class="project-description">Django REST API notification rule engine with CRUD-based rule management, failure capture, and alerting system.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">REST API</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">GitHub</a>
+                        <h3>University Cricket Team</h3>
+                        <p>Represented university in inter-college cricket tournaments.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Sports</span>
+                            <span class="tag">Teamwork</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #10b981, #059669); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600;">I</div>
+                <div class="card">
+                    <img class="achievement-img" src="static/images/achievement_4.jpg" alt="Achievement 4">
                     <div class="project-content">
-                        <h3 class="project-title">IoT Smart Access System</h3>
-                        <p class="project-description">Secure access control system with sensor-based logic and embedded decision-making for enhanced security.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">ESP32</span>
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">Sensors</span>
-                            <span class="tech-tag">Security</span>
+                        <h3>Long-Distance Cycling</h3>
+                        <p>Completed multiple long-distance cycling challenges demonstrating endurance.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Fitness</span>
+                            <span class="tag">Endurance</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="achievement-img" src="static/images/achievement_5.jpg" alt="Achievement 5">
+                    <div class="project-content">
+                        <h3>Technical Certifications</h3>
+                        <p>Earned industry-recognized certifications in cybersecurity and cloud computing.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Certified</span>
+                            <span class="tag">Professional</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="achievement-img" src="static/images/achievement_6.jpg" alt="Achievement 6">
+                    <div class="project-content">
+                        <h3>Coming Soon</h3>
+                        <p>More exciting achievements on the way. Stay tuned!</p>
+                        <div class="tech-tags">
+                            <span class="tag">TBA</span>
                         </div>
                     </div>
                 </div>
@@ -319,5 +421,22 @@
     </footer>
 
     <script src="static/js/main.js"></script>
+    <script>
+        function attachHoverShift(selector) {
+            document.querySelectorAll(selector).forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const offset = e.clientX - rect.left;
+                    const move = (offset - rect.width/2) / rect.width * 20;
+                    card.style.transform = `translateX(${move}px)`;
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                });
+            });
+        }
+        attachHoverShift('.project');
+        attachHoverShift('.achievement-card');
+    </script>
 </body>
 </html>

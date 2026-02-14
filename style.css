@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
 :root {
     --primary-color: #00d9ff;
     --secondary-color: #0099cc;
@@ -23,6 +32,15 @@ body {
     color: var(--text-dark);
     overflow-x: hidden;
     background: var(--bg-dark);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 /* Navigation */
@@ -372,10 +390,13 @@ body {
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
     gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
 }
+.projects-grid::-webkit-scrollbar { height: 8px; }
+.projects-grid::-webkit-scrollbar-thumb { background: rgba(0,217,255,0.3); border-radius: 4px; }
 
 .project-card {
     background: var(--card-bg);
@@ -416,8 +437,45 @@ body {
     object-fit: cover;
 }
 
-.project-content {
-    padding: 1.5rem;
+.scrolling-wrapper {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-behavior: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex: 0 0 270px;
+    height: 480px;
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(0, 217, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-hover);
+}
+
+.project-img, .achievement-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
 }
 
 .project-title {
@@ -802,4 +860,40 @@ body {
     color: white;
     margin-bottom: 1rem;
     animation: pulse 3s ease-in-out infinite;
+}
+
+
+/* Horizontal Scrolling Projects */
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.scrolling-wrapper .card {
+    flex: 0 0 auto;
+    width: 270px;
+    height: 480px;
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 217, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.scrolling-wrapper .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-hover);
 }
